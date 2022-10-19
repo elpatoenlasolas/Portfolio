@@ -374,11 +374,11 @@ input {
     margin-left: 98px;
 }
 
-.comments {
+.message {
     margin-left: 135px;
 }
 
-#comments {
+#messageBox {
     margin-left: 50px;
     text-align: center;
 }
@@ -390,10 +390,4 @@ input {
 
 .received {
     height: 1080px;
-}
-.message {
-    margin-top: 150px;
-    height: 200px;
-    position: relative;
-    text-align: center;
 }
