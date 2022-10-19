@@ -346,6 +346,8 @@ footer li{
     border-radius: 55px;
 }
 
+/*** FORM ***/
+
 label {
     line-height: 35px;
 }
@@ -387,6 +389,8 @@ input {
     margin-left: 80px;
     cursor: pointer;
 }
+
+/** RECEIVED **/
 
 .received {
     height: 800px;
