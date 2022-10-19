@@ -389,5 +389,16 @@ input {
 }
 
 .received {
-    height: 1080px;
+    height: 800px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    text-align: center;
 }
