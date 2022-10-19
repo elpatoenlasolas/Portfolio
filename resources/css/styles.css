@@ -1,0 +1,399 @@
+/******* GLOBAL STYLES *******/
+html {
+    font-size: 16px;
+    transition: smooth;
+    top: 0px;
+}
+
+body {
+    top: 0px;
+    left: 0px;
+    height: 700px;
+    width: 100%;
+    font-family: 'Libre Baskerville', serif;
+    background-color: white;
+    position: relative;
+}
+
+.background {
+    overflow:hidden;
+    position: relative
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(to bottom, transparent, rgb(238, 238, 238)),
+    url("../images/background-2.JPG");
+    background-size: cover;
+    opacity: 0.6;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+}
+
+
+/******* LANDING STYLES *******/
+
+.welcome {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.intro {
+    color: white;
+    cursor: pointer;
+    text-shadow: 0px 0px 4px black;
+    transition: text-shadow 200ms linear;
+}
+
+.intro:hover {
+    text-shadow: 1px 2px 6px black;
+    font-size: 10rem;
+}
+
+/********* HEADER STYLES *********/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    width: 100%;
+    position: relative;
+    padding: 10px 0px 10px;
+}
+
+.header h2 {
+    font-size: 1.6rem;
+    font-family: 'Ubuntu';
+    text-decoration: none;
+    color: black;
+}
+
+.header h2 a {
+    margin-left: 30px;
+    position: relative;
+    text-shadow: 1px 1px 4px white;
+    transition: color .3s linear;
+    transition: text-shadow .3 linear;
+}
+
+.header h2 a:hover {
+    color: white;
+    text-shadow: 0px 0px 3px black;
+    text-shadow: 1px 1px 5px rgb(28, 28, 28);
+}
+
+ul {
+    margin-right: 30px;
+}
+
+.header li {
+    display: inline-flex;
+    font-size: 1.11rem;
+    font-family: 'Libre Baskerville';
+    cursor: pointer;
+    margin: 0px 7px 0px;
+}
+
+.header li {
+    color: rgb(44, 44, 44);
+    text-decoration: none;
+    position: relative;
+    transition: color .2s linear;
+    transition: text-shadow .2s linear;
+}
+
+.header li:hover {
+    text-shadow: .4px .4px 1.5px black;
+    color: rgb(221, 227, 230);
+}
+
+.header li:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 1px solid black;
+    transition: 0.3s;
+  }
+
+.header li:hover:after {
+    width: 100%;
+  }
+
+
+/********* MAIN STYLES *********/
+
+
+.desc {
+    font-family: 'Libre Baskerville';
+    margin-top: 420px;
+    margin-bottom: 600px;
+    width: 100%;
+    text-align: center;
+    color:rgb(44, 44, 44);
+    position: relative;
+}
+
+.desc h2 {
+    font-size: 1.7rem;
+    font-family: 'Libre Baskerville';
+}
+
+.desc h5{
+    font-size: 1.4rem;
+    font-family: 'Libre Baskerville';
+}
+
+/********* ABOUT STYLES *********/
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    text-align: justify;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 520px;
+    width: 480px;
+    border-radius: 30px 80px;
+    position: relative;
+    background: linear-gradient(135deg, rgba(2, 255, 213, 0.474), rgba(49, 163, 255, 0.44), rgba(154, 79, 220, 0.4));
+}
+
+.content img {
+    height: 502px;
+    width: 462px;
+    border-radius: 25px 75px;
+}
+
+.content h2 {
+    color:black;
+    margin-bottom: 40px;
+}
+
+.content p {
+    width: 400px;
+    color:rgb(44, 44, 44);
+    line-height: 20px;
+    text-indent: 5px;
+    margin-top: -5px;
+}
+
+.text a {
+    transition: color .2s linear;
+    text-decoration: underline;
+}
+
+.text a:hover {
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 3px black;
+    text-decoration: none;
+}
+
+
+/********* PROJECTS STYLES *********/
+.proj-intro{
+    margin: 80px auto 50px;
+    position: relative;
+}
+
+.proj-intro a{
+    text-align: center;
+    width: 100%;
+}
+
+.projects {
+    width: 100%;
+    height: 1400px;
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    grid-template: 300px 300px 300px 300px / 80px 1140px;
+    gap: 20px;
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.projects iframe{
+    border-radius: 25px;
+    box-shadow: 2px 2px 4px black;
+    position: relative;
+}
+
+.projects p {
+    text-align: center;
+    font-weight: 600;
+}
+
+.projects a {
+    font-size: 1.2rem;
+    width: 170px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    transition: color .15s linear;
+    transition: text-shadow .15s linear;
+}
+
+.projects a:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px black;
+}
+
+.projects a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 1px solid black;
+    transition: 0.3s;
+  }
+
+.projects a:hover:after {
+    width: 100%;
+  }
+
+/********* FOOTER STYLES *********/
+
+footer {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 2rem;
+    width: 100%;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+footer p{
+    font-family: 'Ubuntu';
+    font-size: .69rem;
+    margin-right: 35px;
+}
+
+footer li{
+    display: inline;
+    margin-right: 4.4px;
+    }
+    
+.smedia img {
+    width: 20px;
+    height: 20px;
+    transition-property: scale;
+    transition-duration: .4s;
+}
+    
+.smedia:hover img {
+    scale: 2 2;
+}
+
+/********* CONTACT STYLES *********/
+
+.contact {
+    height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    position: relative;
+}
+
+.c-desc {
+    margin-top: 100px;
+    font-size: 1.5rem;
+    position: absolute;
+}
+
+.the_form {
+    position: absolute;
+    padding: 30px 50px 30px;
+    background-color: rgba(205, 205, 205, 0.25);
+    margin-top: 210px;
+    text-align: justify;
+    display: flex;
+    border-radius: 55px;
+}
+
+label {
+    line-height: 35px;
+}
+
+input {
+    border: 0.2px black solid;
+    background-color: rgba(226, 226, 226, 0.4);
+    margin-left: 20px;
+    text-align: center;
+    border-radius: 1px;
+    height: 40px;
+    width: 200px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+#senderName {
+    margin-left: 72px;
+}
+
+#phone {
+    margin-left: 27px;
+}
+
+#email {
+    margin-left: 98px;
+}
+
+.comments {
+    margin-left: 135px;
+}
+
+#comments {
+    margin-left: 50px;
+    text-align: center;
+}
+
+.sendButton {
+    margin-left: 80px;
+    cursor: pointer;
+}
+
+.received {
+    height: 1080px;
+}
+.message {
+    margin-top: 150px;
+    height: 200px;
+    position: relative;
+    text-align: center;
+}
