@@ -2,37 +2,35 @@
 html {
     font-size: 16px;
     transition: smooth;
-    top: 0px;
+    height: auto;
 }
 
 body {
-    top: 0px;
-    left: 0px;
-    height: 700px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
     width: 100%;
     font-family: 'Libre Baskerville', serif;
     background-color: white;
     position: relative;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .background {
     overflow: hidden;
-    position: relative
-}
-
-.background::before {
-    content: "";
-    position: absolute;
+    position: relative;
+    background: linear-gradient(to bottom, transparent, rgb(238, 238, 238)),
+    url("../images/background-2.JPG") no-repeat;
+    background-size: cover;
     height: auto;
     width: 100%;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background: linear-gradient(to bottom, transparent, rgb(238, 238, 238)),
-    url("../images/background-2.JPG");
-    background-size: cover;
-    opacity: 0.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -47,12 +45,14 @@ a {
     color: rgb(44, 44, 44);
 }
 
-@media only screen and (min-width: 380px) and (max-width: 480px) {
+@media only screen and (max-device-width: 844px) {
      h1 {
         font-size: 1.7rem;
+        width: 100%;
      }
      body {
-        height: 695px;
+        display: flex;
+        flex-direction: column;
      }
 }
 
@@ -79,9 +79,13 @@ a {
     font-size: 10rem;
 }
 
-@media only screen and (min-width: 380px) and (max-width: 480px) {
+@media only screen and (max-device-width: 844px) {
      .intro:hover {
         font-size: 3rem;
+     }
+     .intro {
+        height: auto;
+        position: relative;
      }
 }
 
@@ -168,12 +172,12 @@ ul {
     width: 100%;
   }
 
-@media only screen and (min-width: 380px) and (max-width: 480px) {
+  @media only screen and (max-device-width: 844px) {
      .header h2 {
-        font-size: 1rem;
+        font-size: 1.4rem;
      }
      .header li {
-        font-size: .9rem;
+        font-size: 1rem;
      }
 }
 
@@ -200,7 +204,7 @@ ul {
     font-family: 'Libre Baskerville';
 }
 
-@media only screen and (min-width: 380px) and (max-width: 480px) {
+@media only screen and (max-device-width: 844px) {
      .desc {
         height: 100px;
         display: grid;
@@ -267,27 +271,31 @@ ul {
     text-decoration: none;
 }
 
-@media only screen and (min-width: 380px) and (max-width: 480px) {
+@media only screen and (max-device-width: 844px) {
     .content{
         display: grid;
-        margin-top: 0px;
-        width: 300px;
-        height: 1000px;
+        grid-template: 500px 300px / 600px;
+        margin-top: 250px;
+        width: 100%;
+        gap: 50px;
     }
+
     .image {
         height: 260px;
         width: 240px;
         margin-bottom: 60px;
-        margin-left: 20px;
+        margin-left: 211px;
     }
      .content img {
         height: 251px;
         width: 231px;
      }
+    
      .text {
-        width: 200px;
-        margin-left: 20px;
-     }
+        margin-left: 129px;
+        width: 500px;
+    }
+
      .text h2 {
         font-size: 1rem;
      }
@@ -365,12 +373,15 @@ ul {
     width: 100%;
   }
 
-@media only screen and (min-width: 380px) and (max-width: 480px) {
+  @media only screen and (max-device-width: 844px) {
     .proj-intro {
         width: 300px;
     }
      .proj-intro p{
+        padding: 5% 25% 5%;
+        border-radius: 20px;
         font-size: 1rem;
+        background: linear-gradient(to bottom, rgb(148, 148, 148), transparent);
      }
      .projects {
         display: grid;
@@ -380,7 +391,12 @@ ul {
         height: 600px;
         grid-template: 200px / 200px;
         gap: 2px;
-        
+     }
+
+     .projects p{
+        padding: 10%;
+        border-radius: 20px;
+        background: linear-gradient(to bottom, rgb(211, 211, 211), transparent);
      }
      
      .projects iframe {
@@ -398,7 +414,7 @@ footer {
     height: 2rem;
     width: 100%;
     position: relative;
-    margin-bottom: 12px;
+    margin-top: auto;
 }
 
 footer p{
@@ -423,9 +439,6 @@ footer li{
     scale: 2 2;
 }
 
-@media only screen and (min-width: 380px) and (max-width: 480px) {
-     
-}
 
 /********* CONTACT STYLES *********/
 
@@ -438,9 +451,11 @@ footer li{
 }
 
 .c-desc {
+    width: 100%;
+    text-align: center;
     margin-top: 100px;
     font-size: 1.5rem;
-    position: absolute;
+    position: relative;
 }
 
 .the_form {
@@ -453,13 +468,16 @@ footer li{
     border-radius: 55px;
 }
 
-@media only screen and (min-width: 380px) and (max-width: 480px) {
+@media only screen and (max-device-width: 844px) {
     .contact {
         width: 100%;
     }
      .c-desc {
         font-size: 1rem;
-        width: 350px;
+        margin-top: 120px;
+     }
+     .the-form {
+        margin-top: 456px;
      }
 }
 
@@ -513,9 +531,7 @@ input {
     border-bottom: 2px rgb(44, 44, 44) solid;
 }
 
-@media only screen and (min-width: 380px) and (max-width: 480px) {
-     
-}
+
 
 /** RECEIVED **/
 
@@ -534,7 +550,7 @@ input {
     text-align: center;
 }
 
-@media only screen and (min-width: 380px) and (max-width: 480px) {
+@media only screen and (max-device-width: 844px) {
      .msg h2{
         font-size: 1.2rem;
      }
