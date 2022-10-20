@@ -375,22 +375,21 @@ ul {
 
   @media only screen and (max-device-width: 844px) {
     .proj-intro {
-        width: 300px;
+        width: 600px;
     }
      .proj-intro p{
         padding: 5% 25% 5%;
         border-radius: 20px;
-        font-size: 1rem;
+        font-size: 1.6rem;
         background: linear-gradient(to bottom, rgb(148, 148, 148), transparent);
      }
      .projects {
         display: grid;
         width: 100%;
-        margin-top: 50px;
         margin-bottom: 100px;
-        height: 600px;
-        grid-template: 200px / 200px;
-        gap: 2px;
+        height: auto;
+        grid-template: 50px 400px / 200px;
+        justify-content: space-around;
      }
 
      .projects p{
@@ -400,7 +399,8 @@ ul {
      }
      
      .projects iframe {
-        display: none;
+        width: 700px;
+        justify-self: center;
      }
 
 }
