@@ -13,18 +13,4 @@ function mouseOut() {
 }
 welcome.onmouseout = mouseOut;
 
-// Changes the color of ENTER when active.
-function mouseActive() {
-    welcome.innerHTML = 'ENTER';
-    welcome.style.color = '#CACACA';
-}
-welcome.onmousedown = mouseActive;
-
-// Changes the color back to white after activating.
-function mouseInactive() {
-    welcome.style.color = 'white';
-}
-welcome.onmousemove = mouseInactive;
-
-
 // -- -- -- -- //
