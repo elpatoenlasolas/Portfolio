@@ -21,16 +21,27 @@ body {
 }
 
 .background {
-    overflow: hidden;
     position: relative;
-    background: linear-gradient(to bottom, transparent, rgb(238, 238, 238)),
-    url("../images/background-2.JPG") no-repeat;
-    background-size: cover;
     height: auto;
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.background::before{
+    content: " ";
+    display: block;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to bottom, transparent, rgb(238, 238, 238)),
+    url("../images/background-2.JPG") no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
 }
 
 h1 {
@@ -386,7 +397,6 @@ ul {
         padding: 5% 25% 5%;
         border-radius: 20px;
         font-size: 1.6rem;
-        background: linear-gradient(to bottom, rgb(148, 148, 148), transparent);
      }
      .projects {
         display: grid;
@@ -400,7 +410,6 @@ ul {
      .projects p{
         padding: 10%;
         border-radius: 20px;
-        background: linear-gradient(to bottom, white, lightgrey, grey, transparent)
      }
      
      .projects iframe {
